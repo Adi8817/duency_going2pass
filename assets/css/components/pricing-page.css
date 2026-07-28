@@ -1,0 +1,97 @@
+/* ==========================================================================
+   pricing-page.css — dedicated Pricing page: simple lesson/evening rate
+   cards, Intensive Fast Pass course cards, featured special-offer card,
+   and pricing notes card. Reuses .pricing-card language + existing tokens.
+   ========================================================================== */
+
+/* ---- Simple rate cards (Lesson Prices / Evening Lessons) ---- */
+.rate-cards-grid {
+  max-width: var(--max-width); margin: 0 auto;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: var(--space-4);
+  align-items: stretch;
+}
+.rate-card {
+  background: #fff; border-radius: 18px; border: 1px solid var(--color-border);
+  padding: var(--space-5); text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: var(--space-2);
+  height: 100%;
+  box-shadow: 0 1px 2px rgba(22, 33, 92, 0.03);
+  transition: box-shadow var(--transition-base), transform var(--transition-base), border-color var(--transition-base);
+}
+.rate-card:hover {
+  box-shadow: 0 24px 48px -16px rgba(22, 33, 92, 0.22), 0 4px 12px rgba(22, 33, 92, 0.06);
+  transform: translateY(-4px);
+  border-color: rgba(22, 33, 92, 0.12);
+}
+.rate-card-name { font-size: 13px; font-weight: 700; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.03em; }
+.rate-card-price { font-family: var(--font-heading); font-weight: 800; font-size: 34px; color: var(--color-navy); line-height: 1; }
+
+/* ---- Intensive Fast Pass course cards ---- */
+.course-cards-grid {
+  max-width: var(--max-width); margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5);
+  align-items: stretch;
+}
+.course-card {
+  position: relative; background: #fff; border-radius: 20px; border: 1px solid var(--color-border);
+  padding: var(--space-6) var(--space-5) var(--space-5);
+  display: flex; flex-direction: column; height: 100%;
+  box-shadow: 0 1px 2px rgba(22,33,92,0.03), 0 18px 40px -22px rgba(22,33,92,0.18);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1px 2px rgba(22,33,92,0.04), 0 30px 56px -20px rgba(22,33,92,0.26);
+  border-color: rgba(22, 33, 92, 0.12);
+}
+.course-card-badge {
+  align-self: flex-start;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--color-red); background: #fdeceb; border-radius: var(--radius-pill);
+  padding: 4px 10px; margin-bottom: var(--space-3);
+}
+.course-card-title { font-family: var(--font-heading); font-weight: 700; font-size: 18px; color: var(--color-ink); margin: 0 0 var(--space-2); }
+.course-card-price-row { display: flex; align-items: baseline; gap: 6px; margin-bottom: var(--space-4); padding-bottom: var(--space-4); border-bottom: 1px solid var(--color-border-2); }
+.course-card-price { font-family: var(--font-heading); font-weight: 800; font-size: 36px; color: var(--color-navy); line-height: 1; }
+.course-card-desc { font-size: 14.5px; line-height: 1.7; color: var(--color-muted); margin: 0; flex: 1; }
+
+@media (max-width: 992px) {
+  .course-cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .course-cards-grid { grid-template-columns: 1fr; }
+}
+
+/* ---- Featured special offer ---- */
+.offer-feature-card {
+  max-width: 640px; margin: 0 auto; position: relative; overflow: hidden;
+  background: linear-gradient(165deg, var(--color-navy) 0%, var(--color-navy-dark) 120%);
+  border-radius: 24px; padding: var(--space-7) var(--space-6);
+  text-align: center; color: #fff;
+  box-shadow: 0 1px 2px rgba(9,15,45,0.3), 0 30px 60px -20px rgba(9,15,45,0.5);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.offer-feature-card::before {
+  content: ""; position: absolute; top: -60px; right: -60px; z-index: 0;
+  width: 260px; height: 260px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(94, 201, 122, 0.28), transparent 70%);
+}
+.offer-feature-badge {
+  position: relative; z-index: 1;
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.22);
+  color: var(--color-green-pale); font-weight: 700; font-size: 12.5px; letter-spacing: 0.08em;
+  padding: var(--space-2) var(--space-3); border-radius: var(--radius-pill); margin-bottom: var(--space-4);
+}
+.offer-feature-title { position: relative; z-index: 1; font-family: var(--font-heading); font-weight: 700; font-size: clamp(24px, 3vw, 30px); margin: 0 0 var(--space-3); }
+.offer-feature-price { position: relative; z-index: 1; font-family: var(--font-heading); font-weight: 800; font-size: clamp(56px, 7vw, 76px); color: var(--color-green-light); line-height: 1; margin-bottom: var(--space-5); }
+.offer-feature-card .btn { position: relative; z-index: 1; }
+
+/* ---- Pricing notes card ---- */
+.pricing-note-card {
+  max-width: 760px; margin: 0 auto;
+  background: var(--color-bg-cream); border: 1px solid var(--color-border-2); border-radius: 16px;
+  padding: var(--space-5); display: flex; gap: var(--space-3); align-items: flex-start;
+}
+.pricing-note-icon { flex: none; color: var(--color-red); margin-top: 2px; }
+.pricing-note-text { font-size: 14px; line-height: 1.7; color: var(--color-muted); margin: 0; }

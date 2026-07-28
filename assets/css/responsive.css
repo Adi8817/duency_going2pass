@@ -1,0 +1,166 @@
+/* ==========================================================================
+   responsive.css — all breakpoints in one auditable place.
+   Mobile-first refinements layered on top of the fluid clamp()-based
+   defaults already in each component file. Covers 320–1920px.
+   ========================================================================== */
+
+/* ---- ≤1180px : nav switches to burger menu ---- */
+@media (max-width: 1180px) {
+  .nav-links, .nav-call { display: none; }
+  .nav-burger { display: flex; }
+}
+
+/* ---- Header + Footer responsive refinements ---- */
+@media (max-width: 992px) {
+  .footer-grid { grid-template-columns: 1.2fr 1fr 1fr 1fr; }
+  .footer-col-brand { grid-column: 1 / -1; }
+}
+
+/* Services grid: 3 / 2 / 1 columns exactly, independent of card min-width */
+@media (max-width: 991px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
+}
+@media (max-width: 640px) {
+  .services-grid { grid-template-columns: 1fr; gap: var(--space-4); }
+}
+
+/* Why Choose Us: balanced 2x2 rather than a squeezed 4-up once space gets
+   tight, full single column on phones */
+@media (max-width: 1200px) {
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .why-grid { grid-template-columns: 1fr; gap: var(--space-4); }
+  .why-card { padding: var(--space-5) var(--space-4); }
+}
+
+@media (max-width: 768px) {
+  .nav-bar { height: 68px; }
+  .nav-logo { height: 38px; }
+  .footer-grid { grid-template-columns: 1fr 1fr 1fr; gap: var(--space-5); }
+  .footer-col-brand { grid-column: 1 / -1; }
+  .footer-desc { max-width: none; }
+  .footer-bottom-inner { flex-direction: column; text-align: center; gap: var(--space-2); }
+  .pricing-card.is-featured { transform: scale(1); }
+  .pricing-card.is-featured:hover { transform: translateY(-6px); }
+}
+
+@media (max-width: 576px) {
+  .footer-grid { grid-template-columns: 1fr; padding-top: var(--space-6); padding-bottom: var(--space-5); }
+  .footer-desc { max-width: none; }
+}
+
+@media (max-width: 414px) {
+  .nav-bar { height: 64px; }
+  .nav-logo { height: 34px; }
+}
+
+/* ---- ≤992px (small laptop / large tablet) : tighten section rhythm ---- */
+@media (max-width: 992px) {
+  .hero-inner { gap: var(--space-5); }
+  .welcome, .locations-inner { gap: var(--space-5); }
+}
+
+/* ---- ≤768px (tablet) : stack hero, reduce heading scale slightly ---- */
+@media (max-width: 768px) {
+  .container, .section, .welcome, .faq-section { padding-left: var(--space-3); padding-right: var(--space-3); }
+  .hero { padding-left: var(--space-3); padding-right: var(--space-3); }
+  .hero-inner { gap: var(--space-4); }
+  .lead-form-card { max-width: 100%; }
+  .cta-band-inner { text-align: center; justify-content: center; }
+  .cta-actions { width: 100%; justify-content: center; }
+}
+
+/* ---- ≤576px : buttons go full-width, tighter card padding ---- */
+@media (max-width: 576px) {
+  .hero-actions .btn { flex: 1 1 auto; }
+  .hero-stats { gap: var(--space-3); row-gap: var(--space-3); }
+  .transmission-row { flex-direction: column; }
+  .cta-actions .cta-btn-white,
+  .cta-actions .cta-btn-outline { width: 100%; }
+  .service-card, .why-card, .pricing-card { padding: var(--space-4); }
+  .lead-form-card { padding: var(--space-4); }
+}
+
+/* ---- ≤480px (large phones) ---- */
+@media (max-width: 480px) {
+  .location-tags { gap: var(--space-2); }
+  .footer-grid { gap: var(--space-4); }
+  .nav-logo { height: 38px; }
+  .testimonial-arrow { width: 38px; height: 38px; }
+  .testimonial-arrow-prev { left: var(--space-2); }
+  .testimonial-arrow-next { right: var(--space-2); }
+}
+
+/* ---- ≤414/390/375/320px (phones) : smallest safe paddings, no overflow ---- */
+@media (max-width: 414px) {
+  .container, .section, .welcome, .faq-section, .hero { padding-left: var(--space-2); padding-right: var(--space-2); }
+  .nav-bar { padding-left: var(--space-2); padding-right: var(--space-2); }
+  .lead-form-card { padding: var(--space-3); }
+  .hero-title { font-size: 28px; }
+  .cta-title { font-size: 22px; }
+}
+
+@media (max-width: 320px) {
+  .nav-logo { height: 30px; }
+  .hero-badge { font-size: 11px; padding: 6px 10px; }
+  .nav-call-text small { display: none; }
+}
+
+/* ---- ≥1200px : slightly roomier section rhythm on larger screens ---- */
+@media (min-width: 1200px) {
+  .services-grid, .why-grid { gap: var(--space-5); }
+}
+
+/* ---- ≥1440px : cap line-length growth, add breathing room ---- */
+@media (min-width: 1440px) {
+  .hero-sub, .welcome-copy p, .locations-copy p { max-width: 560px; }
+}
+
+/* ---- ≥1600/1920px : ultra-wide — content stays capped at --max-width via
+   each section's own container, this only nudges outer edge padding ---- */
+@media (min-width: 1600px) {
+  .nav-bar, .hero-inner, .welcome, .locations-inner, .footer-grid { padding-left: var(--space-5); padding-right: var(--space-5); }
+}
+
+/* ==========================================================================
+   Mobile spacing refinements (≤768px only) — consistent breathing room
+   across sections, headings, buttons, cards and footer. Sizes/colors/type
+   untouched; padding/margin/gap only.
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Consistent outer container gutter */
+  .container, .section, .welcome, .faq-section, .hero,
+  .locations-inner, .stats-band, .hours-card, .about-hero-inner {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+
+  /* Section-to-section vertical rhythm */
+  .section { padding-top: var(--space-7); padding-bottom: var(--space-7); }
+  .welcome { padding-top: var(--space-7); padding-bottom: var(--space-7); }
+
+  /* Heading / intro / paragraph spacing */
+  .section-intro { margin-bottom: var(--space-5); }
+  .section-title { margin-bottom: var(--space-3); }
+  .eyebrow { margin-bottom: var(--space-2); }
+  .welcome-copy p, .legacy-intro-copy p, .about-intro-copy p { margin-bottom: var(--space-3); }
+
+  /* Button groups: comfortable tap spacing, no crowding */
+  .hero-actions, .about-hero-actions, .about-intro-actions, .cta-actions {
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+  }
+
+  /* Card interior padding */
+  .service-card, .why-card, .pricing-card, .value-card,
+  .about-feature-card, .why-learn-item, .legacy-offers, .about-callout {
+    padding: var(--space-5);
+  }
+  .why-learn-item { gap: var(--space-3); }
+
+  /* Footer breathing room */
+  .footer-grid { padding-top: var(--space-6); padding-bottom: var(--space-6); gap: var(--space-6); }
+  .footer-col { margin-bottom: var(--space-2); }
+  .footer-bottom-inner { padding-top: var(--space-4); padding-bottom: var(--space-4); }
+}

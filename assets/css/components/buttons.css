@@ -1,0 +1,19 @@
+/* ==========================================================================
+   buttons.css — shared button/CTA styles
+   ========================================================================== */
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+  font-weight: 700; font-size: 15.5px; text-decoration: none;
+  padding: var(--space-3) var(--space-4); border-radius: var(--radius-sm); border: none; cursor: pointer;
+  font-family: var(--font-body);
+  min-height: var(--tap-target);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--color-red); color: #fff; box-shadow: 0 10px 24px rgba(221,36,28,0.35); }
+.btn-primary:hover { background: var(--color-red-hover); color: #fff; }
+.btn-primary:focus-visible { box-shadow: var(--focus-ring-on-dark); }
+.btn-outline { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.4); }
+.btn-outline:hover { border-color: #fff; color: #fff; }
+.btn-outline:focus-visible { box-shadow: var(--focus-ring-on-dark); }

@@ -1,0 +1,62 @@
+/* ==========================================================================
+   legacy-about.css — "Our Story" section. Presents the original client
+   copy (NHS note, intro paragraphs, offers list, closing call-to-action
+   line) verbatim in a premium layout. No wording changes — layout only.
+   ========================================================================== */
+.legacy-section { max-width: var(--max-width); margin: 0 auto; padding: clamp(56px, 7vw, 96px) var(--space-4); }
+
+.legacy-banner {
+  display: flex; align-items: center; gap: var(--space-3);
+  background: #eafaf0; border: 1px solid rgba(47, 168, 79, 0.25); border-radius: 14px;
+  padding: var(--space-4) var(--space-5); margin-bottom: var(--space-7);
+}
+.legacy-banner-icon {
+  flex: none; width: 40px; height: 40px; border-radius: 50%; background: rgba(47, 168, 79, 0.15);
+  display: flex; align-items: center; justify-content: center;
+}
+.legacy-banner-title { font-family: var(--font-heading); font-weight: 700; font-size: 15px; color: var(--color-green-dark); margin: 0 0 2px; }
+.legacy-banner-text { font-size: 14px; color: var(--color-ink); margin: 0; }
+
+.legacy-intro { display: flex; flex-wrap: wrap; gap: var(--space-7); align-items: center; margin-bottom: var(--space-7); }
+.legacy-intro-copy { flex: 1.3 1 460px; min-width: 0; }
+.legacy-intro-copy p {
+  font-size: 15.5px; line-height: 1.8; color: var(--color-ink); margin: 0 0 var(--space-4);
+}
+.legacy-intro-copy p:first-of-type { font-size: 17px; font-weight: 600; color: var(--color-navy); }
+.legacy-intro-media { flex: 1 1 320px; min-width: 260px; }
+.legacy-intro-media img, .legacy-intro-media image-slot {
+  display: block; width: 100%; height: auto; border-radius: 20px;
+  box-shadow: 0 24px 48px -20px rgba(22, 33, 92, 0.25); border: 1px solid var(--color-border);
+}
+
+.legacy-offers {
+  display: flex; flex-wrap: wrap; gap: var(--space-6); align-items: center;
+  background: var(--color-bg-cream); border: 1px solid var(--color-border); border-radius: 22px;
+  padding: var(--space-6);
+}
+.legacy-offers-copy { flex: 1.2 1 380px; min-width: 0; }
+.legacy-offers-heading {
+  font-family: var(--font-heading); font-weight: 700; font-size: 19px; color: var(--color-red); margin: 0 0 var(--space-4);
+}
+.legacy-offers-list { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: var(--space-5); }
+.legacy-offers-list li {
+  font-size: 14.5px; color: var(--color-ink); padding-left: var(--space-4); position: relative;
+  margin-bottom: var(--space-2); break-inside: avoid;
+}
+.legacy-offers-list li::before {
+  content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: var(--color-red);
+}
+.legacy-offers-media { flex: 1 1 300px; min-width: 240px; }
+.legacy-offers-media img, .legacy-offers-media image-slot {
+  display: block; width: 100%; height: auto; border-radius: 16px;
+  box-shadow: 0 20px 40px -18px rgba(22, 33, 92, 0.22);
+}
+
+.legacy-closing { text-align: center; margin-top: var(--space-7); }
+.legacy-closing p {
+  font-size: 16px; line-height: 1.7; color: var(--color-ink); max-width: 800px; margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+  .legacy-offers-list { columns: 1; }
+}

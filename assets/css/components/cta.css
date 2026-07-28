@@ -1,0 +1,28 @@
+/* ==========================================================================
+   cta.css — bottom "get your free quote / call us now" band
+   ========================================================================== */
+
+.cta-band { background: var(--color-red); padding: var(--space-6) var(--space-4); }
+.cta-band-inner {
+  max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: var(--space-4);
+  align-items: center; justify-content: space-between;
+}
+.cta-title { font-family: var(--font-heading); font-weight: 800; font-size: clamp(22px,2.6vw,30px); color: #fff; margin-bottom: var(--space-1); }
+.cta-sub { font-size: 15px; color: #ffd7d4; }
+.cta-actions { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+.cta-btn-white {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #fff; color: var(--color-red); font-weight: 700; font-size: 15px;
+  padding: var(--space-3) var(--space-4); border-radius: var(--radius-sm); min-height: var(--tap-target);
+  transition: opacity var(--transition-fast);
+}
+.cta-btn-white:hover { color: var(--color-red-hover); opacity: 0.92; }
+.cta-btn-white:focus-visible { box-shadow: var(--focus-ring-on-dark); }
+.cta-btn-outline {
+  display: flex; align-items: center; justify-content: center; gap: 8px; background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.6); color: #fff; font-weight: 700; font-size: 15px;
+  padding: var(--space-3) var(--space-4); border-radius: var(--radius-sm); min-height: var(--tap-target);
+  transition: border-color var(--transition-fast);
+}
+.cta-btn-outline:hover { color: #fff; border-color: #fff; }
+.cta-btn-outline:focus-visible { box-shadow: var(--focus-ring-on-dark); }

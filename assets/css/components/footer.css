@@ -1,0 +1,109 @@
+/* ==========================================================================
+   footer.css — light-weight, agency-style footer: 5 lean columns + a
+   slim credit bar. Same navy/red brand tokens, meaningfully less visual
+   weight than a card-heavy footer (no pill lists, no bullet dots, no
+   heavy dividers).
+   ========================================================================== */
+
+.site-footer {
+  background: var(--color-navy-dark);
+  color: var(--color-lavender);
+  position: relative;
+}
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12) 50%, transparent);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.85fr 0.9fr 0.8fr 1fr;
+  gap: var(--space-6);
+  padding: var(--space-7) var(--space-4) var(--space-6);
+}
+
+.footer-col { min-width: 0; }
+
+.footer-logo-wrap {
+  background: #fff;
+  display: inline-flex;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-4);
+}
+.footer-logo { height: 34px; width: auto; }
+.footer-desc {
+  font-size: 13.5px; line-height: 1.7; color: var(--color-lavender-dim);
+  margin: 0 0 var(--space-4); max-width: 28ch;
+}
+
+.footer-social { display: flex; gap: var(--space-3); }
+.footer-social a {
+  display: flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+  color: var(--color-lavender-dim);
+  transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+.footer-social a:hover {
+  color: #fff; background: var(--color-red); border-color: var(--color-red);
+  transform: translateY(-3px);
+}
+
+.footer-heading {
+  font-family: var(--font-heading); font-weight: 700; font-size: 12.5px; letter-spacing: 0.06em;
+  text-transform: uppercase; color: #fff; margin: 0 0 var(--space-4);
+}
+
+.footer-links { display: flex; flex-direction: column; gap: 3px; }
+.footer-links a {
+  color: var(--color-lavender-dim); text-decoration: none; font-size: 14px; font-weight: 500;
+  display: inline-flex; align-items: center;
+  padding: 7px 0;
+  transition: color var(--transition-fast), gap var(--transition-fast);
+  gap: 0;
+}
+.footer-links a::after {
+  content: "\2192";
+  opacity: 0;
+  margin-left: 0;
+  transition: opacity var(--transition-fast), margin-left var(--transition-fast);
+  color: var(--color-red);
+  font-size: 12px;
+}
+.footer-links a:hover { color: #fff; }
+.footer-links a:hover::after { opacity: 1; margin-left: 6px; }
+
+.footer-contact { display: flex; flex-direction: column; gap: var(--space-3); font-size: 14px; }
+.footer-contact a, .footer-location {
+  display: flex; align-items: center; gap: var(--space-2);
+  color: var(--color-lavender-dim); text-decoration: none;
+  transition: color var(--transition-fast);
+}
+.footer-contact a svg, .footer-location svg {
+  flex: none;
+  width: 15px; height: 15px;
+  color: var(--color-green-light);
+}
+.footer-contact a:hover { color: #fff; }
+
+.footer-areas-label { font-size: 13px; line-height: 1.9; color: var(--color-lavender-dim); }
+.footer-areas-label a {
+  color: var(--color-lavender-dim); text-decoration: none; transition: color var(--transition-fast);
+}
+.footer-areas-label a:hover { color: var(--color-red); }
+
+/* ---- Bottom credit bar ---- */
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); }
+.footer-bottom-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-3);
+  padding: var(--space-4) var(--space-4);
+}
+.footer-copyright { margin: 0; font-size: 12.5px; color: var(--color-lavender-dim); }
+.footer-credit { margin: 0; font-size: 12.5px; color: var(--color-lavender-dim); }
+.footer-credit span { color: var(--color-lavender); font-weight: 600; }
+.footer-credit a { color: inherit; text-decoration: none; }
+.footer-credit a:hover span { color: var(--color-red); }

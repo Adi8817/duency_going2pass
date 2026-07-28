@@ -1,0 +1,6 @@
+/* ==========================================================================
+   utilities.css — small reusable helper classes, not tied to one component
+   ========================================================================== */
+
+.text-center { text-align: center; }
+.hidden { display: none !important; }

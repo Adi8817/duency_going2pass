@@ -1,0 +1,54 @@
+/* ==========================================================================
+   lead-form.css — lead-generation quote form card (in hero)
+   ========================================================================== */
+
+.lead-form-card {
+  flex: 1 1 380px; min-width: 0; width: 100%; max-width: 440px;
+  background: #ffffff; border-radius: var(--radius-lg); padding: var(--space-5);
+  box-shadow: 0 40px 80px -20px rgba(4, 8, 30, 0.55), 0 0 0 1px rgba(255,255,255,0.06);
+  scroll-margin-top: 100px;
+  position: relative; z-index: 2;
+}
+.lead-form-title { font-family: var(--font-heading); font-weight: 700; font-size: 20px; color: var(--color-navy); margin: 0 0 var(--space-1); }
+.lead-form-note { font-size: 13.5px; color: var(--color-muted); margin: 0 0 var(--space-4); }
+.lead-form { display: flex; flex-direction: column; gap: var(--space-3); }
+.lead-form input[type="text"],
+.lead-form input[type="tel"],
+.lead-form select {
+  width: 100%; padding: var(--space-3); border: 1.5px solid var(--color-border-2);
+  border-radius: var(--radius-sm); font-size: 15px; font-family: var(--font-body); outline: none;
+  color: var(--color-ink); background: #fff; min-height: var(--tap-target);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.lead-form input:hover, .lead-form select:hover { border-color: var(--color-navy); }
+.lead-form input:focus, .lead-form select:focus { border-color: var(--color-navy); box-shadow: var(--focus-ring); }
+.transmission-row { display: flex; gap: var(--space-2); }
+.transmission-option {
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: 7px;
+  border: 1.5px solid var(--color-border-2); background: #fff; color: var(--color-muted);
+  border-radius: var(--radius-sm); padding: var(--space-3); font-size: 13.5px; font-weight: 600; cursor: pointer;
+  min-height: var(--tap-target);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+}
+.transmission-option:hover { border-color: var(--color-navy); }
+.transmission-option input { accent-color: var(--color-navy); }
+.transmission-option.is-active { border-color: var(--color-navy); background: #eef0fb; color: var(--color-navy); }
+.lead-form-submit {
+  margin-top: var(--space-1); background: var(--color-red); color: #fff; border: none;
+  font-weight: 700; font-size: 15.5px; padding: var(--space-3); border-radius: var(--radius-sm); cursor: pointer;
+  min-height: var(--tap-target);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+.lead-form-submit:hover { background: var(--color-red-hover); }
+.lead-form-submit:active { transform: translateY(1px); }
+.lead-form-legal { font-size: 11.5px; color: var(--color-faint); text-align: center; line-height: 1.5; }
+
+.lead-form-success { display: none; text-align: center; padding: 30px 6px; }
+.lead-form-success.is-visible { display: block; }
+.lead-form.is-hidden { display: none; }
+.success-icon-wrap {
+  width: 56px; height: 56px; border-radius: 50%; background: #e5f6e9;
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 18px;
+}
+.lead-form-success-title { font-family: var(--font-heading); font-weight: 700; font-size: 19px; margin-bottom: 8px; }
+.lead-form-success-text { color: var(--color-muted); font-size: 14.5px; line-height: 1.6; }

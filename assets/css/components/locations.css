@@ -1,0 +1,37 @@
+/* ==========================================================================
+   locations.css — areas covered section
+   ========================================================================== */
+
+.locations-inner {
+  max-width: var(--max-width); margin: 0 auto; display: flex; flex-wrap: wrap;
+  gap: var(--space-7); align-items: center;
+}
+.locations-media {
+  flex: 1 1 380px; min-width: 280px; aspect-ratio: 10/9; border-radius: 20px;
+  overflow: hidden; position: relative;
+  background: #eef1fb;
+  box-shadow: 0 24px 48px -18px rgba(22, 33, 92, 0.24), 0 2px 8px rgba(22, 33, 92, 0.08);
+  border: 1px solid rgba(22, 33, 92, 0.08);
+}
+.locations-media-image {
+  width: 100%; height: 100%; object-fit: cover; object-position: center;
+  display: block;
+}
+.locations-copy { flex: 1 1 420px; min-width: 300px; }
+.locations-title { font-family: var(--font-heading); font-weight: 800; font-size: clamp(26px,3vw,36px); line-height: 1.2; color: var(--color-navy); margin: 0 0 var(--space-3); text-wrap: balance; }
+.locations-copy p { font-size: 15.5px; line-height: 1.7; color: var(--color-muted); margin: 0 0 var(--space-5); max-width: 46ch; text-wrap: pretty; }
+.location-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.location-tag {
+  display: inline-flex; align-items: center; gap: 7px; background: #fff; border: 1px solid var(--color-border-2);
+  color: var(--color-ink); font-weight: 600; font-size: 13.5px; padding: var(--space-2) var(--space-3) var(--space-2) 10px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 1px 2px rgba(22, 33, 92, 0.04);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.location-tag svg { flex: none; transition: stroke var(--transition-fast); }
+.location-tag:hover {
+  background: var(--color-navy); border-color: var(--color-navy); color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -8px rgba(22, 33, 92, 0.4);
+}
+.location-tag:hover svg { stroke: #fff; }

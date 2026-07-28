@@ -1,0 +1,36 @@
+/* ==========================================================================
+   why-learn.css — compact icon-row grid for the "Why Learn With Going2Pass"
+   section. Distinct from why-choose-us.css's navy cards so the two don't
+   read as duplicates on the same page.
+   ========================================================================== */
+.why-learn-grid {
+  max-width: var(--max-width); margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4);
+}
+.why-learn-item {
+  display: flex; align-items: center; gap: var(--space-3);
+  background: #fff; border: 1px solid var(--color-border); border-radius: 16px;
+  padding: var(--space-4);
+  box-shadow: 0 1px 2px rgba(22, 33, 92, 0.03);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+.why-learn-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px -18px rgba(22, 33, 92, 0.2);
+  border-color: rgba(221, 36, 28, 0.2);
+}
+.why-learn-icon {
+  flex: none; width: 44px; height: 44px; border-radius: 12px; background: #fdeceb;
+  display: flex; align-items: center; justify-content: center;
+}
+.why-learn-label {
+  font-family: var(--font-heading); font-weight: 700; font-size: 14.5px; line-height: 1.35;
+  color: var(--color-navy);
+}
+
+@media (max-width: 1200px) {
+  .why-learn-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .why-learn-grid { grid-template-columns: 1fr; }
+}

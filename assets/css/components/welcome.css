@@ -1,0 +1,24 @@
+/* ==========================================================================
+   welcome.css — welcome/intro section
+   ========================================================================== */
+
+.welcome {
+  max-width: var(--max-width); margin: 0 auto; padding: clamp(56px,7vw,96px) var(--space-4);
+  display: flex; flex-wrap: wrap-reverse; gap: var(--space-6); align-items: center;
+}
+.welcome-media {
+  flex: 1 1 380px; min-width: 280px; aspect-ratio: 5/4; border-radius: 20px;
+  overflow: hidden; position: relative;
+  background: var(--color-bg-cream);
+  box-shadow: 0 24px 48px -18px rgba(22, 33, 92, 0.28), 0 2px 8px rgba(22, 33, 92, 0.08);
+  border: 1px solid rgba(22, 33, 92, 0.08);
+}
+.welcome-media-image {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 42%;
+  display: block;
+}
+.welcome-copy { flex: 1 1 420px; min-width: 300px; }
+.welcome-title { font-family: var(--font-heading); font-weight: 800; font-size: clamp(26px,3vw,38px); line-height: 1.15; color: var(--color-navy); margin: 0 0 var(--space-3); text-wrap: balance; }
+.welcome-copy p { font-size: 16.5px; line-height: 1.75; color: var(--color-body); margin: 0 0 var(--space-3); text-wrap: pretty; }
+.welcome-link { color: var(--color-navy); font-weight: 700; font-size: 15px; display: inline-flex; align-items: center; gap: var(--space-2); }
+.welcome-link:hover { color: var(--color-red); }

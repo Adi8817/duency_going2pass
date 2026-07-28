@@ -1,0 +1,37 @@
+/* ==========================================================================
+   main.css — single entry point. Import order matters:
+   variables -> base -> components -> utilities -> responsive (last, so
+   breakpoint overrides always win the cascade).
+   ========================================================================== */
+
+@import url("variables.css");
+@import url("base.css");
+
+@import url("components/buttons.css");
+@import url("components/navigation.css");
+@import url("components/hero.css");
+@import url("components/lead-form.css");
+@import url("components/welcome.css");
+@import url("components/services.css");
+@import url("components/why-learn.css");
+@import url("components/offers.css");
+@import url("components/legacy-about.css");
+@import url("components/why-choose-us.css");
+@import url("components/locations.css");
+@import url("components/testimonials.css");
+@import url("components/pricing.css");
+@import url("components/cta.css");
+@import url("components/faq.css");
+@import url("components/footer.css");
+@import url("components/about.css");
+@import url("components/student-gallery.css");
+@import url("components/marquee-gallery.css");
+@import url("components/area-cards.css");
+@import url("components/contact.css");
+@import url("components/testimonials-grid.css");
+@import url("components/pricing-page.css");
+@import url("components/service-image-cards.css");
+@import url("components/student-photo-masonry.css");
+
+@import url("utilities.css");
+@import url("responsive.css");

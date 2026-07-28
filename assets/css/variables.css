@@ -1,0 +1,58 @@
+/* ==========================================================================
+   variables.css — design tokens (colors, fonts, layout constants)
+   ========================================================================== */
+
+:root {
+  --color-navy: #16215c;
+  --color-navy-dark: #0e1740;
+  --color-navy-deep: #223491;
+  --color-red: #dd241c;
+  --color-red-hover: #b81b14;
+  --color-green: #2fa84f;
+  --color-green-light: #5ec97a;
+  --color-green-pale: #8fe6a6;
+  --color-ink: #16181f;
+  --color-body: #454a58;
+  --color-muted: #5b5f6b;
+  --color-faint: #9aa0ac;
+  --color-border: #eceaea;
+  --color-border-2: #e3e2e8;
+  --color-bg-cream: #f7f6f1;
+  --color-lavender: #c7cdea;
+  --color-lavender-dim: #9aa2c9;
+
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Work Sans', sans-serif;
+
+  --max-width: 1280px;
+
+  /* 8px spacing scale — used across components for consistent rhythm */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+
+  /* Shared radii / shadows / motion so cards, buttons and inputs stay visually consistent */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 12px rgba(20, 30, 90, 0.05);
+  --shadow-md: 0 10px 30px rgba(20, 30, 90, 0.06);
+  --shadow-lg: 0 16px 32px rgba(20, 30, 90, 0.08);
+  --shadow-xl: 0 30px 60px rgba(6, 10, 40, 0.35);
+
+  --focus-ring: 0 0 0 3px rgba(22, 33, 92, 0.18);
+  --focus-ring-on-dark: 0 0 0 3px rgba(255, 255, 255, 0.35);
+
+  --transition-fast: 0.18s ease;
+  --transition-base: 0.25s ease;
+
+  /* Minimum touch target size for interactive elements on touch devices */
+  --tap-target: 44px;
+}

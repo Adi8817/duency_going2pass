@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2b3a72"></stop>
+      <stop offset="55%" stop-color="#1c2a5e"></stop>
+      <stop offset="100%" stop-color="#11193f"></stop>
+    </linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#394a86"></stop>
+      <stop offset="100%" stop-color="#0d1330"></stop>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd9a0" stop-opacity="0.9"></stop>
+      <stop offset="100%" stop-color="#ffd9a0" stop-opacity="0"></stop>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8fe6a6" stop-opacity="0.5"></stop>
+      <stop offset="100%" stop-color="#8fe6a6" stop-opacity="0"></stop>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky)"></rect>
+  <polygon points="760,1080 1160,1080 1000,300 920,300" fill="url(#road)"></polygon>
+  <g stroke="#ffffff" stroke-width="10" opacity="0.35">
+    <line x1="960" y1="980" x2="958" y2="900"></line>
+    <line x1="960" y1="820" x2="957" y2="760"></line>
+    <line x1="960" y1="700" x2="958" y2="655"></line>
+    <line x1="960" y1="600" x2="959" y2="565"></line>
+  </g>
+  <circle cx="640" cy="560" r="140" fill="url(#glow1)"></circle>
+  <circle cx="1300" cy="480" r="160" fill="url(#glow1)"></circle>
+  <circle cx="1550" cy="760" r="220" fill="url(#glow2)"></circle>
+  <circle cx="330" cy="820" r="200" fill="url(#glow2)"></circle>
+</svg>

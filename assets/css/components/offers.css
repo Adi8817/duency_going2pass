@@ -1,0 +1,15 @@
+/* ==========================================================================
+   offers.css — "Our Driving School Offers" grid. Reuses the approved
+   .services-grid/.service-card pattern from services.css (unmodified) via
+   an .offers-grid alias so spacing/hover behavior stays identical.
+   ========================================================================== */
+.offers-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5);
+  align-items: stretch;
+}
+@media (max-width: 1200px) {
+  .offers-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .offers-grid { grid-template-columns: 1fr; }
+}

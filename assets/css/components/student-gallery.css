@@ -1,0 +1,40 @@
+/* ==========================================================================
+   student-gallery.css — about-page "Meet Our Successful Students" story
+   cards. Reuses existing tokens/shadows/radii only, no new colors.
+   ========================================================================== */
+
+/* ---- About page: student story cards ---- */
+.student-stories-grid {
+  max-width: var(--max-width); margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5);
+}
+.student-story-card {
+  background: #fff; border-radius: 20px; overflow: hidden; border: 1px solid var(--color-border);
+  box-shadow: 0 1px 2px rgba(22,33,92,0.03), 0 18px 36px -20px rgba(22,33,92,0.2);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.student-story-card:hover { transform: translateY(-6px); box-shadow: 0 28px 48px -18px rgba(22,33,92,0.28); }
+.student-story-photo { position: relative; aspect-ratio: 4/5; overflow: hidden; }
+.student-story-photo image-slot { display: block; width: 100%; height: 100%; }
+.student-story-badge {
+  position: absolute; top: var(--space-3); left: var(--space-3); z-index: 2; pointer-events: none;
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(255,255,255,0.95); backdrop-filter: blur(6px);
+  color: var(--color-green); font-weight: 700; font-size: 11.5px;
+  padding: 5px 10px; border-radius: var(--radius-pill);
+  box-shadow: 0 6px 14px -6px rgba(9,15,45,0.3);
+}
+.student-story-body { padding: var(--space-4) var(--space-4) var(--space-5); }
+.student-story-name { font-family: var(--font-heading); font-weight: 700; font-size: 16px; color: var(--color-navy); }
+.student-story-area {
+  font-size: 12.5px; font-weight: 600; color: var(--color-red); text-transform: uppercase; letter-spacing: 0.04em;
+  margin: 2px 0 var(--space-3);
+}
+.student-story-quote { font-size: 14px; line-height: 1.6; color: var(--color-muted); margin: 0; }
+
+@media (max-width: 992px) {
+  .student-stories-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .student-stories-grid { grid-template-columns: 1fr; }
+}

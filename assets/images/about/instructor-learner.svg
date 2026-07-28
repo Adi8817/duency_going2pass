@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="800" viewBox="0 0 1000 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef1fb"></stop>
+      <stop offset="100%" stop-color="#dfe4f6"></stop>
+    </linearGradient>
+    <linearGradient id="car" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a3572"></stop>
+      <stop offset="100%" stop-color="#16215c"></stop>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bcd0ff" stop-opacity="0.9"></stop>
+      <stop offset="100%" stop-color="#9fb6f0" stop-opacity="0.5"></stop>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe3a8" stop-opacity="0.9"></stop>
+      <stop offset="100%" stop-color="#ffe3a8" stop-opacity="0"></stop>
+    </radialGradient>
+  </defs>
+  <rect width="1000" height="800" fill="url(#bg)"></rect>
+  <circle cx="800" cy="150" r="220" fill="url(#sun)"></circle>
+  
+  <rect x="0" y="620" width="1000" height="180" fill="#c9cee6"></rect>
+  <rect x="0" y="620" width="1000" height="10" fill="#aab1d9"></rect>
+  
+  <rect x="140" y="330" width="720" height="260" rx="46" fill="url(#car)"></rect>
+  <rect x="200" y="230" width="600" height="180" rx="40" fill="url(#car)"></rect>
+  
+  <path d="M240 240 L560 240 L600 400 L230 400 Z" fill="url(#glass)"></path>
+  <path d="M620 240 L770 240 L790 400 L650 400 Z" fill="url(#glass)"></path>
+  
+  <circle cx="360" cy="330" r="46" fill="#3a4680"></circle>
+  <rect x="316" y="372" width="88" height="90" rx="26" fill="#3a4680"></rect>
+  
+  <circle cx="560" cy="330" r="46" fill="#5a6bb0"></circle>
+  <rect x="516" y="372" width="88" height="90" rx="26" fill="#5a6bb0"></rect>
+  
+  <circle cx="560" cy="440" r="34" fill="none" stroke="#c7cdea" stroke-width="8"></circle>
+  
+  <circle cx="300" cy="600" r="46" fill="#0e1740"></circle>
+  <circle cx="300" cy="600" r="18" fill="#c7cdea"></circle>
+  <circle cx="740" cy="600" r="46" fill="#0e1740"></circle>
+  <circle cx="740" cy="600" r="18" fill="#c7cdea"></circle>
+  
+  <rect x="150" y="360" width="54" height="54" rx="8" fill="#ffffff" stroke="#dd241c" stroke-width="4"></rect>
+  <text x="177" y="401" font-family="Poppins, sans-serif" font-size="34" font-weight="800" fill="#dd241c" text-anchor="middle">L</text>
+</svg>

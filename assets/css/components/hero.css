@@ -1,0 +1,174 @@
+/* ==========================================================================
+   hero.css — banner section (headline, CTA actions, stats)
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  background: var(--color-navy-dark);
+  padding: clamp(48px, 7vw, 88px) var(--space-4) clamp(64px, 8vw, 110px);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Background photo — kept intentionally faint; the overlay gradient on top
+   does the heavy lifting so text contrast stays excellent at every size. */
+.hero-bg-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+/* Premium dark-navy overlay: image reads at roughly 10-15% visibility */
+/* .hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(94, 201, 122, 0.16) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 12% 85%,
+      rgba(221, 36, 28, 0.14) 0%,
+      transparent 45%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(14, 23, 64, 0.94) 0%,
+      rgba(22, 33, 92, 0.93) 45%,
+      rgba(9, 15, 45, 0.97) 100%
+    );
+} */
+ .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(94, 201, 122, 0.12) 0%,
+            transparent 45%
+        ),
+        radial-gradient(
+            circle at 12% 85%,
+            rgba(221, 36, 28, 0.10) 0%,
+            transparent 45%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(14, 23, 64, 0.72) 0%,
+            rgba(22, 33, 92, 0.68) 45%,
+            rgba(9, 15, 45, 0.76) 100%
+        );
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -80px;
+  z-index: 1;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(221, 36, 28, 0.35), transparent 70%);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -60px;
+  z-index: 1;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(47, 168, 79, 0.25), transparent 70%);
+}
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  align-items: center;
+}
+.hero-copy {
+  flex: 1 1 480px;
+  min-width: 0;
+  
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(8px) saturate(140%);
+  -webkit-backdrop-filter: blur(8px) saturate(140%);
+  color: var(--color-green-pale);
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.08em;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-4);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+.hero-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(32px, 4.4vw, 48px);
+  line-height: 1.1;
+  color: #fff;
+  margin: 0 0 var(--space-3);
+  text-wrap: balance;
+}
+.hero-title span {
+  color: var(--color-green-light);
+}
+.hero-sub {
+  font-size: clamp(16px, 1.6vw, 19px);
+  line-height: 1.6;
+  color: white;
+  max-width: 520px;
+  margin: 0 0 var(--space-5);
+  text-wrap: pretty;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+.hero-actions .btn-primary {
+  box-shadow:
+    0 10px 24px rgba(221, 36, 28, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 0 32px rgba(221, 36, 28, 0.22);
+}
+.hero-actions .btn-outline {
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.06);
+}
+.hero-stats {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+  flex-wrap: wrap;
+}
+.hero-stat-num {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 26px;
+  color: #fff;
+}
+.hero-stat-label {
+  font-size: 12.5px;
+  color: var(--color-lavender-dim);
+}
