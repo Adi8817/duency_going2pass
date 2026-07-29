@@ -1,0 +1,48 @@
+/* ==========================================================================
+   thank-you.css — Thank You confirmation page. Reuses existing tokens only.
+   ========================================================================== */
+.ty-hero { background: var(--color-navy); padding: clamp(72px,9vw,120px) var(--space-4) clamp(56px,7vw,88px); text-align: center; }
+.ty-icon-wrap {
+  width: 84px; height: 84px; border-radius: 50%; margin: 0 auto var(--space-5);
+  background: rgba(143,230,166,0.14); border: 1px solid rgba(143,230,166,0.3);
+  display: flex; align-items: center; justify-content: center;
+  animation: ty-pop 0.6s cubic-bezier(.2,1.4,.4,1) both;
+}
+@keyframes ty-pop { from { transform: scale(0.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.ty-title {
+  font-family: var(--font-heading); font-weight: 800; color: #fff;
+  font-size: clamp(30px,4vw,46px); line-height: 1.15; margin: 0 0 var(--space-3);
+  max-width: 760px; margin-left: auto; margin-right: auto; text-wrap: balance;
+}
+.ty-sub { font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.82); max-width: 560px; margin: 0 auto; }
+
+.ty-next-grid {
+  max-width: var(--max-width); margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4);
+}
+.ty-next-card {
+  background: #fff; border: 1px solid var(--color-border); border-radius: var(--radius-lg);
+  padding: var(--space-5); box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.ty-next-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.ty-next-num {
+  width: 34px; height: 34px; border-radius: 50%; background: rgba(47,168,79,0.1);
+  color: var(--color-green); font-weight: 800; font-size: 14px;
+  display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3);
+}
+.ty-next-title { font-family: var(--font-heading); font-weight: 700; font-size: 16px; color: var(--color-ink); margin: 0 0 6px; }
+.ty-next-desc { font-size: 14px; line-height: 1.65; color: var(--color-muted); margin: 0; }
+
+.ty-actions { display: flex; justify-content: center; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-7); }
+
+.ty-closing { text-align: center; max-width: 640px; margin: 0 auto; }
+.ty-closing p { font-size: 16px; line-height: 1.75; color: var(--color-body); }
+
+@media (max-width: 992px) {
+  .ty-next-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .ty-next-grid { grid-template-columns: 1fr; }
+  .ty-actions .btn { flex: 1 1 auto; }
+}
