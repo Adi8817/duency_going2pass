@@ -6,7 +6,7 @@
 (function () {
   var FEATURED_COUNT = 8;
   var STUDENT_GALLERY_IMAGES = [];
-  for (var i = 1; i <= 37; i++) {
+  for (var i = 1; i <= 55; i++) {
     var n = (i < 10 ? '0' : '') + i;
     STUDENT_GALLERY_IMAGES.push({
       file: 'student-' + n + '.jpg',
